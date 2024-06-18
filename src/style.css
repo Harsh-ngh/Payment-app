@@ -5,6 +5,7 @@
   background-size: 100%;
   position: relative;
 }
+
 .home .navbar {
   height: 7vh;
   display: flex;
@@ -14,17 +15,20 @@
   justify-content: space-between;
   border-bottom: 1px solid rgba(255, 255, 0, 0.629);
 }
+
 .home .navbar a {
   text-decoration: none;
   color: black;
-  margin-right: 10px;
+  margin-left: 10px;
   cursor: pointer;
   font-size: 18px;
   font-weight: bold;
 }
+
 .home .navbar form {
   cursor: pointer;
 }
+
 .home .container {
   display: flex;
   flex-direction: column;
@@ -35,14 +39,16 @@
   padding: 10px;
   position: absolute;
   top: 25%;
-  left: 10%;
+  right: 10%; /* Move to the right */
   background-color: rgba(128, 128, 128, 0.422);
   align-items: center;
 }
+
 .home .container p {
   font-family: cursive;
   font-weight: bold;
 }
+
 .home .container button {
   height: 10%;
   width: 28%;
@@ -52,13 +58,17 @@
   border-radius: 10%;
   background-color: rgba(66, 100, 194, 0.847);
 }
+
 .home .payment {
   display: flex;
   flex-direction: column;
   height: 90vh;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  right: 10%; 
 }
+
 .home .payment .paymentWrapper {
   background-color: rgba(128, 128, 128, 0.422);
   padding: 20px 60px;
@@ -67,10 +77,11 @@
   flex-direction: column;
   align-items: center;
 }
+
 .home .payment form {
   cursor: pointer;
 }
 
 body {
   margin: 0px;
-}/*# sourceMappingURL=style.css.map */
+} 
