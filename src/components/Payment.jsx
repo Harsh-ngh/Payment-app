@@ -15,7 +15,7 @@ const Payment = () => {
   return (
     <div className="payment">
       <div className="paymentWrapper">
-        <h1>Thank You For the Support❤️</h1>
+        <h1>Thank You For the Support🤞</h1>
         <form id="rzp_payment"></form>
       </div>
     </div>
