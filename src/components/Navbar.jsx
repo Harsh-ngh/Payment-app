@@ -10,7 +10,7 @@ const Navbar = () => {
       const script = document.createElement("script");
       script.src = "https://checkout.razorpay.com/v1/payment-button.js";
       script.async = true;
-      script.dataset.payment_button_id = "pl_M2OShpgGM6cFmU";
+      script.dataset.payment_button_id = "pl_OOhXZhTJhqUNYx";
       rzpPaymentForm.appendChild(script);
     }
   }, []);

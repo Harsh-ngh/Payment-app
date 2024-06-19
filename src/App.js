@@ -1,4 +1,3 @@
-
 import React from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Navbar from "./components/Navbar";
@@ -14,12 +13,12 @@ const Home = () => {
         Sharing nourishes the soul"
       </h1>
       <p>
-        Food Insecurity Affects Nearly 1 Billion People,
+        In India, millions of orphan and poor children face severe food shortages.
         <br />
-        Leading to 2 Million Child Deaths Annually
+        A small donation of ₹100 can make a big difference in their lives.
       </p>
       <Link to="/pay">
-        <button>Let's give a helping hand 🤞</button>
+        <button>Pay Now</button>
       </Link>
     </div>
   );

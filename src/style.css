@@ -1,8 +1,14 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
 .home {
   height: 100vh;
   width: 100vw;
   background-image: url("./images/background.jpg");
-  background-size: 100%;
+  background-size: cover;
+  background-position: center;
   position: relative;
 }
 
@@ -33,55 +39,68 @@
   display: flex;
   flex-direction: column;
   border-radius: 10px;
-  width: 29%;
-  height: 50%;
-  overflow: hidden;
-  padding: 10px;
+  width: 80%;
+  max-width: 800px; /* Increased max-width */
+  padding: 30px; /* Increased padding */
   position: absolute;
-  top: 25%;
-  right: 10%; /* Move to the right */
-  background-color: rgba(128, 128, 128, 0.422);
-  align-items: center;
+  top: 35%; /* Adjusted top position */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin-bottom: 20px; /* Added margin bottom */
+}
+
+.home .container h1 {
+  font-size: 28px; /* Increased font size */
+  margin-bottom: 20px;
 }
 
 .home .container p {
   font-family: cursive;
   font-weight: bold;
+  font-size: 16px; /* Smaller size for bold text */
+  margin-bottom: 20px;
+  line-height: 1.4;
 }
 
-.home .container button {
-  height: 10%;
-  width: 28%;
+.home .container .donateButton {
+  height: 50px;
+  width: 80%; /* Increased width of the button */
+  max-width: 300px;
   border: none;
   cursor: pointer;
-  color: rgb(255, 255, 255);
-  border-radius: 10%;
-  background-color: rgba(66, 100, 194, 0.847);
+  color: #fff;
+  border-radius: 5px;
+  background-color: rgba(12, 72, 237, 0.847);
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-top: 20px; /* Added margin top */
+}
+
+.home .container .donateButton:hover {
+  background-color: rgb(29, 82, 228);
 }
 
 .home .payment {
   display: flex;
   flex-direction: column;
-  height: 90vh;
+  height: 100vh;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  right: 9; 
 }
 
 .home .payment .paymentWrapper {
-  background-color: rgba(128, 128, 128, 0.422);
+  background-color: rgba(255, 255, 255, 0.8);
   padding: 20px 60px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .home .payment form {
   cursor: pointer;
 }
-
-body {
-  margin: 0px;
-} 

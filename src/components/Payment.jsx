@@ -4,14 +4,22 @@ const Payment = () => {
   useEffect(() => {
     const rzpPaymentForm = document.getElementById("rzp_payment");
 
+    
     if (!rzpPaymentForm.hasChildNodes()) {
       const script = document.createElement("script");
       script.src = "https://checkout.razorpay.com/v1/payment-button.js";
       script.async = true;
-      script.dataset.payment_button_id = "pl_M2OShpgGM6cFmU";
+      script.dataset.payment_button_id = "pl_OOhXZhTJhqUNYx"; 
+      
+      
+      script.onerror = () => {
+        console.error("Razorpay script failed to load.");
+      };
+
       rzpPaymentForm.appendChild(script);
     }
-  });
+  }, []); 
+
   return (
     <div className="payment">
       <div className="paymentWrapper">
