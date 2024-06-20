@@ -10,7 +10,7 @@ const Payment = () => {
   };
 
   const paymentWrapperStyle = {
-    backgroundColor: "rgba(154, 46, 46, 0.422)",
+    backgroundColor: "rgba(128, 128, 128, 0.7)",
     padding: "20px 60px",
     borderRadius: "10px",
     display: "flex",
@@ -38,7 +38,7 @@ const Payment = () => {
   return (
     <div style={paymentStyle}>
       <div style={paymentWrapperStyle}>
-        <h1>Thank You For the Support🤞</h1>
+        <h1>Thank You For the Support 🤝</h1>
         <form id="rzp_payment"></form>
       </div>
     </div>

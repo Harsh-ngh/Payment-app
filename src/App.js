@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Payment from "./components/Payment";
 import About from "./components/About";
-import Home from "./components/Home"; // Import the modified Home component
+import Home from "./components/Home"; 
+import './style.css'
 
 const App = () => {
   const appStyle = {
@@ -16,11 +17,11 @@ const App = () => {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    justifyContent: "flex-start", // Align content at the top
-    minHeight: "100vh", // Ensure content takes full viewport height
-    backgroundImage: 'url("./images/background.jpg")',
+    justifyContent: "flex-start", 
+    minHeight: "100vh", 
+   
     backgroundSize: "cover",
-    padding: "20px", // Add padding for content
+    padding: "20px", 
   };
 
   return (

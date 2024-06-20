@@ -6,7 +6,11 @@ const About = () => {
     padding: "20px",
     textAlign: "center",
     maxWidth: "800px",
-    margin: "0 auto"
+    margin: "0 auto",
+    minHeight: "calc(100vh - 64px - 20px)", // Adjusted to maintain distance from Navbar and screen bottom
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   };
 
   const headingStyle = {
@@ -32,11 +36,14 @@ const About = () => {
   };
 
   const boxStyle = {
-    backgroundColor: "rgba(128, 128, 128, 0.8)", // Transparent grey color
-    padding: "20px",
+    backgroundColor: "rgba(128, 128, 128, 0.8)",
+    padding: "50px", // Reduced padding to decrease the size of the box
     borderRadius: "10px",
+    maxWidth: "600px", // Limiting the maximum width of the box
+    width: "100%",
+    boxSizing: "border-box",
     '@media (max-width: 600px)': {
-      padding: "10px"
+      padding: "20px"
     }
   };
 

@@ -47,7 +47,13 @@ const Navbar = () => {
     justifyContent: "space-between",
     alignItems: "center",
     padding: "10px 20px",
-    backgroundColor: "#f8f9fa"
+    backgroundColor: "#ccc", 
+    marginTop: "0", 
+    position: "fixed", 
+    width: "100%", 
+    zIndex: 1000, 
+    top: 0,
+    left: 0
   };
 
   const navbarLeftStyle = {
@@ -59,23 +65,27 @@ const Navbar = () => {
     flexGrow: 1,
     textAlign: "center",
     fontSize: "20px",
-    position: "relative", // Required for absolute positioning of animation
-    overflow: "hidden", // Hide overflow to prevent text spillage during animation
-    animation: "enlargeShrink 3s infinite alternate ease-in-out" // Keyframe animation
+    position: "relative",
+    overflow: "hidden",
+    animation: "enlargeShrink 3s infinite alternate ease-in-out"
   };
 
   const navbarRightStyle = {
-    display: "flex",
-    alignItems: "center"
-  };
+  display: "flex",
+  alignItems: "center",
+    marginLeft: "auto",
+  padding:"40px"
+  
+};
 
   const navLinkStyle = isHover => ({
-    textDecoration: "none",
-    color: "#000",
-    fontSize: isHover ? "22px" : "inherit",
-    transition: "font-size 0.3s ease-out",
-    marginLeft: "20px" // Default margin
-  });
+  textDecoration: "none",
+  color: "#000",
+  fontSize: isHover ? "22px" : "inherit",
+  transition: "font-size 0.3s ease-out",
+  marginLeft: "10px", 
+});
+
 
   return (
     <div style={navbarStyle}>
