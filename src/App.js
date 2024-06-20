@@ -1,38 +1,39 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Payment from "./components/Payment";
-import "./style.scss";
-
-const Home = () => {
-  return (
-    <div className="container">
-      <h1>
-        "Food nourishes the body
-        <br />
-        Sharing nourishes the soul"
-      </h1>
-      <p>
-        In India, millions of orphan and poor children face severe food shortages.
-        <br />
-        A small donation of ₹100 can make a big difference in their lives.
-      </p>
-      <Link to="/pay">
-        <button>Pay Now</button>
-      </Link>
-    </div>
-  );
-};
+import About from "./components/About";
+import Home from "./components/Home"; // Import the modified Home component
 
 const App = () => {
+  const appStyle = {
+    height: "100vh",
+    width: "100vw",
+    position: "relative",
+  };
+
+  const contentStyle = {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "flex-start", // Align content at the top
+    minHeight: "100vh", // Ensure content takes full viewport height
+    backgroundImage: 'url("./images/background.jpg")',
+    backgroundSize: "cover",
+    padding: "20px", // Add padding for content
+  };
+
   return (
     <Router>
-      <div className="home">
+      <div style={appStyle}>
         <Navbar />
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route path="/pay" element={<Payment />} />
-        </Routes>
+        <div style={contentStyle}>
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/pay" element={<Payment />} />
+          </Routes>
+        </div>
       </div>
     </Router>
   );
